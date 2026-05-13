@@ -1,0 +1,8 @@
+{
+  "name": "Smartphone",
+  "price": 699.99,
+  "description": "Latest smartphone with 128GB storage",
+  "category": "Electronics",
+  "inStock": true,
+  "stockQuantity": 50
+}

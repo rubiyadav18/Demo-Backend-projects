@@ -1,0 +1,60 @@
+{
+  "createProduct": {
+    "description": "Example JSON for creating a product",
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:3000/api/products",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "Laptop",
+        "description": "High-performance laptop with 16GB RAM and 512GB SSD",
+        "price": 999.99,
+        "category": "Electronics",
+        "inStock": true,
+        "stockQuantity": 25
+      }
+    }
+  },
+  "examples": [
+    {
+      "name": "Basic Product (Minimum Required Fields)",
+      "body": {
+        "name": "Smartphone",
+        "price": 699.99
+      }
+    },
+    {
+      "name": "Full Product Details",
+      "body": {
+        "name": "Gaming Laptop",
+        "description": "High-end gaming laptop with RTX 4080, 32GB RAM, 1TB SSD",
+        "price": 2499.99,
+        "category": "Electronics",
+        "inStock": true,
+        "stockQuantity": 10
+      }
+    },
+    {
+      "name": "Product Without Stock",
+      "body": {
+        "name": "Wireless Mouse",
+        "description": "Ergonomic wireless mouse with RGB lighting",
+        "price": 49.99,
+        "category": "Accessories",
+        "inStock": false,
+        "stockQuantity": 0
+      }
+    },
+    {
+      "name": "Product with Default Values",
+      "body": {
+        "name": "USB-C Cable",
+        "description": "Fast charging USB-C cable, 2 meters",
+        "price": 19.99,
+        "category": "Accessories"
+      }
+    }
+  ]
+}
