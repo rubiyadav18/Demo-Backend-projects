@@ -46,7 +46,12 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api/products', productsRouter);
 app.use('/api/upload', uploadRouter);
-
+app.get('/test', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Backend is working successfully on EC2 🚀',
+  });
+});
 // Root endpoint
 app.get('/', (req, res) => {
   res.json({
