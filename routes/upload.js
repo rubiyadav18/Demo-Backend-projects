@@ -60,6 +60,7 @@ function sanitizeFilename(name) {
 
 function buildPublicUrl(bucketName, key, bucketRegion) {
   const base = process.env.S3_PUBLIC_URL_BASE;
+  console.log('base', base);
   if (base) {
     const trimmed = base.replace(/\/+$/, '');
     const encodedKey = key.split('/').map(encodeURIComponent).join('/');

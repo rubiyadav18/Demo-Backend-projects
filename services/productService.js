@@ -31,6 +31,7 @@ class ProductService {
     });
 
     const savedProduct = await product.save();
+    console.log('savedProduct', savedProduct);
     return savedProduct;
   }
 
