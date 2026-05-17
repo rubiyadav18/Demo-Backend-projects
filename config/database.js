@@ -19,3 +19,9 @@ const connectDB = async () => {
 module.exports = connectDB;
 
 
+
+
+// PORT=3000
+// MONGO_URI=mongodb+srv:rubiy564_db_user:yr9yQo5aDXrKhFw9@cluster0.xq2hm6j.mongodb.net/myDB?retryWrites=true&w=majority
+// JWT_SECRET=mysecretkey
+// NODE_ENV=production
