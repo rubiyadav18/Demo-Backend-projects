@@ -18,7 +18,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd ~/Demo-Backend-projects
-            git pull origin dev-branch
+            git pull origin dev
             npm install
             pm2 restart server
             pm2 save
