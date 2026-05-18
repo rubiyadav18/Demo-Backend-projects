@@ -22,4 +22,3 @@ jobs:
             npm install
             pm2 restart server
             pm2 save
-            pm2 startup
