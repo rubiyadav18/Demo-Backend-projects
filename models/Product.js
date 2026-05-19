@@ -28,6 +28,14 @@ const productSchema = new mongoose.Schema({
     default: 0,
     min: [0, 'Stock quantity must be a positive number'],
   },
+  imageUrl: {
+    type: String,
+    trim: true,
+  },
+  uploadId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Upload',
+  },
 }, {
   timestamps: true,
 });

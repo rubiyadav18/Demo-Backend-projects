@@ -17,6 +17,8 @@ class ProductController {
         error.message === 'Product name is required' ||
         error.message === 'Product price is required' ||
         error.message === 'Price must be a valid number greater than or equal to 0' ||
+        error.message === 'Invalid uploadId' ||
+        error.message === 'Upload not found' ||
         error.message.includes('required') ||
         error.message.includes('Price must be')
       ) {

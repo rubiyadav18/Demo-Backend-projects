@@ -4,6 +4,7 @@ const cors = require('cors');
 const connectDB = require('./config/database');
 const productsRouter = require('./routes/products');
 const uploadRouter = require('./routes/upload');
+const authRouter = require('./routes/auth');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -34,7 +35,7 @@ const corsOptions = {
   },
   credentials: process.env.CORS_CREDENTIALS === 'true',
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
   maxAge: 86400,
 };
 
@@ -44,6 +45,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
+app.use('/api/auth', authRouter);
 app.use('/api/products', productsRouter);
 app.use('/api/upload', uploadRouter);
 app.get('/test', (req, res) => {
@@ -57,6 +59,8 @@ app.get('/', (req, res) => {
   res.json({
     message: 'Welcome to the Products API',
     endpoints: {
+      signup: 'POST /api/auth/signup',
+      login: 'POST /api/auth/login',
       createProduct: 'POST /api/products',
       listProducts: 'GET /api/products',
       getProduct: 'GET /api/products/:id',

@@ -9,6 +9,11 @@ const uploadSchema = new mongoose.Schema(
     originalName: { type: String, trim: true },
     mimeType: { type: String, trim: true },
     size: { type: Number, min: 0 },
+    productId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Product',
+      index: true,
+    },
   },
   { timestamps: true }
 );
